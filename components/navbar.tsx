@@ -11,10 +11,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
     <div
       className={`overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 
-        xl:w-4/5 2xl:w-[68%] bg-white flex items-center 
+        xl:w-4/5 2xl:w-[68%] bg-[rgba(255,255,255,0.8)] backdrop-blur-md flex items-center 
         justify-between py-6 px-4 md:px-8 mx-6 ${className || ''}`}
     >
-      <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer">
+<Link href="/" className="cursor-pointer">
         <Image
           src="/logo/gomobi-trans.png"
           alt="Logo"
@@ -22,21 +22,17 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           height={1000}
           className="w-24"
         />
-      </ScrollLink>
+      </Link>
 
       <div className="absolute right-1/2 translate-x-1/2 transform">
         <div className="hidden md:flex gap-x-10 items-center text-gray-700 font-medium text-lg cursor-pointer">
-          <ScrollLink
-            to="home"
-            smooth={true}
-            duration={500}
-            spy={true}
-            activeClass="text-blue-600 font-semibold"
+        <Link
+            href="/"
             className="hover:text-blue-500"
             tabIndex={0}
           >
             Home
-          </ScrollLink>
+          </Link>
 
           <ScrollLink
             to="services"

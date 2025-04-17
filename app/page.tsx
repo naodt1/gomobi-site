@@ -3,7 +3,7 @@
 import { AnimatedBeamMultipleOutputDemo } from "@/components/home/animated-beam-demo";
 import { AnimatedShinyTextDemo } from "@/components/home/animated-shiny-text-demo";
 import BoxRevealDemo from "@/components/home/box-reveal-demo";
-import { HeroSection } from "@/components/home/HeroSection";
+import { HeroSection } from "@/components/home/sections/HeroSection";
 import { ScrollBasedVelocityDemo } from "@/components/home/scroll-based-velocity-demo";
 import { WordPullUpDemo } from "@/components/home/word-pull-up-demo";
 import BoxReveal from "@/components/magicui/box-reveal";
@@ -18,8 +18,9 @@ import { ShootingStarsAndStarsBackgroundDemo } from "@/components/home/shooting-
 import LetsMakeThingsHappenSection from "@/components/ui/lets-make-things-happen";
 import Navbar from "@/components/navbar";
 import ServiceGrid from "@/components/home/ServiceGrid";
-import StatsSection from "@/components/home/StatsSection";
-import ServicesSection from "@/components/home/ServicesSection";
+import StatsSection from "@/components/home/sections/StatsSection";
+import ServicesSection from "@/components/home/sections/ServicesSection";
+import AboutSection from "@/components/home/sections/AboutSection";
 
 
 export default function Home() {
@@ -54,6 +55,12 @@ export default function Home() {
         <ScrollBasedVelocityDemo />
       </section>
 
+      <br/>
+      <Element name="about">
+        <AboutSection/>
+      </Element>
+
+      <br/>
       <Element name="process">
         <main className="md:px-0 mx-6 md:mx-auto">
           <h1 className="text-3xl md:text-5xl md:text-center font-medium flex items-center gap-x-2 mx-auto justify-center">
@@ -97,9 +104,9 @@ export default function Home() {
             </div>
           </div>
         </main>
-      </Element>
+      </Element> *
 
-      <section>
+      {/* <section>
         <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0">
           <Image
             src={"/logo/logo.webp"}
@@ -129,7 +136,7 @@ export default function Home() {
             </span>
           </div>
         </main>
-      </section>
+      </section> */}
 
       <Element name="guarentees">
         <ShootingStarsAndStarsBackgroundDemo />

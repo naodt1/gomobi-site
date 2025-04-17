@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { WordPullUpDemo } from "./word-pull-up-demo";
+import { WordPullUpDemo } from "../word-pull-up-demo";
 
 const services = [
   {
