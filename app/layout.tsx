@@ -6,18 +6,29 @@ import { Analytics } from "@vercel/analytics/react";
 const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bird | Design & Development Studio",
-  description: "Grow your business with Bird, a design & development studio.",
+  title: "GoMobi – Mobile MVP Agency",
+  description: "GoMobi helps startups and founders launch fast, beautiful MVPs for mobile using cutting-edge tech and lean design.",
   openGraph: {
+    title: "GoMobi – Mobile MVP Agency",
+    description: "We build beautiful, blazing-fast MVPs for mobile. From idea to app store – GoMobi is your startup's technical partner.",
     images: [
       {
-        url: 'https://www.google.com/maps/uv?viewerState=lb&pb=!1s0x11ae81c94242f451:0x2a6b0cac40414137!5sGlobstand+technologies&imagekey=!1e10!2sAF1QipPrTTNGxsOszQTXFD3b68e40o0V_LiVsTWwh-H6&cr=rp_35',
+        url: "https://your-domain.com/og-image.jpg", //TODO: replace with your actual image URL
         width: 1200,
         height: 630,
-        alt: 'Bird Logo',
+        alt: "GoMobi Mobile MVP Agency",
       },
     ],
+    type: "website",
+    siteName: "GoMobi",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoMobi – Mobile MVP Agency",
+    description: "Your partner in launching fast, stunning mobile MVPs.",
+    images: ["https://your-domain.com/og-image.jpg"], // update accordingly
+  },
+  metadataBase: new URL("https://your-domain.com"), // replace with your domain
 };
 
 export default function RootLayout({
@@ -28,10 +39,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-
         {children}
         <Analytics />
-
       </body>
     </html>
   );

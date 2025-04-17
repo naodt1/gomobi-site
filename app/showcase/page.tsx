@@ -1,4 +1,4 @@
-import { BlurFadeDemo } from "@/components/demos/blur-fade-demo";
+import { BlurFadeDemo } from "@/components/home/blur-fade-demo";
 import Footer from "@/components/footer";
 import WordFadeIn from "@/components/magicui/word-fade-in";
 import ShowcaseNavbar from "@/components/showcase-navbar";
