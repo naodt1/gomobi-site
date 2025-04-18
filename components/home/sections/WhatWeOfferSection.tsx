@@ -6,61 +6,64 @@ import Image from "next/image";
 const features = [
   {
     icon: "/icons/fast.svg",
-    title: "Fast Delivery",
+    title: "Quick Turnaround",
     description:
-      "1-2 weeks delivery for most projects. Call us for more information.",
+      "We deliver high-quality mobile and web apps in record time. Most projects are completed within 1-2 weeks. Get in touch to learn more!",
   },
   {
     icon: "/icons/design.svg",
-    title: "Design & Development",
+    title: "Custom Design & Development",
     description:
-      "We design and develop your website with the latest technologies and trends.",
+      "We create bespoke designs and develop with the latest technologies to bring your app or website to life.",
   },
   {
     icon: "/icons/scalable.svg",
-    title: "Scalability + Maintenance ",
-    description: "We offer maintenance and scalability for all websites.",
+    title: "Scalable Solutions",
+    description: "We build apps and websites that grow with your business, ensuring easy scalability and long-term success.",
   },
   {
     icon: "/icons/team.svg",
-    title: "Team of Experts",
-    description: "A team of experts ready to help you, at all times.",
+    title: "Personalized Service",
+    description:
+      "Working directly with the founder ensures a more personalized experience. Your project is my priority, and I'm dedicated to delivering quality work.",
   },
   {
     icon: "/icons/safe.svg",
-    title: "Secure Building",
+    title: "Secure & Reliable",
     description:
-      "Safe and secure building practices. To ensure your data is safe.",
+      "I follow industry best practices to ensure your app or website is secure, protecting your data and your users.",
   },
   {
     icon: "/icons/analytics.svg",
-    title: "Analytics Tracking",
-    description: "Track your progress with our built in analytics",
+    title: "App Store Optimization (ASO)",
+    description:
+      "Enhance your app's visibility and downloads with our effective App Store Optimization (ASO) strategies, helping you rank higher and reach more users.",
   },
-
+  
   {
     icon: "/icons/flexible.svg",
-    title: "Dynamic Websites",
-    description: "We build dynamic solutions that are easy to manage.",
+    title: "Flexible Solutions",
+    description: "I offer dynamic, easy-to-manage websites and mobile apps tailored to your business needs.",
   },
   {
     icon: "/icons/support.svg",
-    title: "24/7 Support",
+    title: "Ongoing Support",
     description:
-      "We offer 24/7 support for all our clients. Call us for more information.",
+      "I provide support after the project is delivered to ensure everything runs smoothly and address any questions or issues.",
   },
   {
     icon: "/icons/money.svg",
     title: "Affordable Pricing",
-    description: "Affordable pricing for all our clients.",
+    description: "Quality development at competitive prices. I offer flexible pricing to fit any budget.",
   },
 ];
 
-export function ShootingStarsAndStarsBackgroundDemo() {
+
+export function WhatWeoffer() {
   return (
     <div className="mt-20 py-10 md:py-20 rounded-[40px] bg-neutral-900 flex flex-col items-center justify-center relative w-full px-6 md:px-0">
       <h2 className="relative flex-col  z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 via-white to-white flex items-center gap-2 ">
-        Our guarantees to you.
+        What We Offer
         <p className="md:text-center   mx-auto  text-xl md:text-2xl text-gray-200">
           We ensure the highest quality of work, with the fastest delivery
           times.

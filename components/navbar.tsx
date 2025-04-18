@@ -59,6 +59,18 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           </ScrollLink>
 
           <ScrollLink
+            to="offer"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-blue-600 font-semibold"
+            className="hover:text-blue-500"
+            tabIndex={0}
+          >
+            Solutions
+          </ScrollLink>
+
+          <ScrollLink
             to="pricing"
             smooth={true}
             duration={500}

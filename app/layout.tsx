@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "https://your-domain.com/og-image.jpg", //TODO: replace with your actual image URL
         width: 1200,
         height: 630,
-        alt: "GoMobi Mobile MVP Agency",
+        alt: "GoMobi Mobile App Development Agency",
       },
     ],
     type: "website",
