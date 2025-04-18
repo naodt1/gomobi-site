@@ -48,7 +48,7 @@ const ServicesSection: React.FC = () => {
         <WordPullUpDemo />
       </h1>
       <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-        We build MVPs that launch
+        We build apps that launch
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
