@@ -17,7 +17,7 @@ export const OurProcessSection = () => {
           className="w-6"
           alt="image"
         />
-        Creative
+        Process
         <Image
           src={"/icons/star.svg"}
           width={10000}
@@ -26,7 +26,6 @@ export const OurProcessSection = () => {
           alt="image"
         />
       </span>{" "}
-      Process
     </h1>
 
     <p
