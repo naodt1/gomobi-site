@@ -1,39 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-// Simplified portfolio items
-const portfolioItems = [
-  {
-    id: 1,
-    title: "Heelies Shoe Ecom",
-    description: "Online shoe store offering footwear for men, women, and children.",
-    imageUrl: "/images/heelies-app.jpg",
-    link: "/project/heelies",
-  },
-  {
-    id: 2,
-    title: "FixMasters",
-    description: "Connects users with handymen for services and bookings.",
-    imageUrl: "/images/fixmasters.png",
-    link: "/project/fixmasters",
-  },
-  {
-    id: 3,
-    title: "Convo Chat-App",
-    description: "Messaging app for seamless communication across the globe.",
-    imageUrl: "/images/convo-chat.jpg",
-    link: "/project/web",
-  },
-//   {
-//     id: 4,
-//     title: "Keepr Password Manager",
-//     description: "Password manager with encryption and multi-factor authentication.",
-//     imageUrl: "/images/keepr-pass.jpg",
-//     link: "/project/keepr",
-//   },
-];
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  link?: string;
+}
 
 // Portfolio Item Component
 const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: string; link?: string }> = ({ imageUrl, title, description, link }) => (
@@ -52,6 +28,26 @@ const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: st
 
 // Portfolio Section Component
 export function PortfolioSection({ className }: { className?: string }) {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/data/projects.json'); // Corrected path
+        if (!response.ok) {
+          throw new Error(`Failed to fetch projects: ${response.status}`);
+        }
+        const data: Project[] = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+        //  Handle error (e.g., show a message to the user)
+        setProjects([]); // Or set to some default empty array
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <section className={`py-16 ${className}`} id="portfolio">
       <div className="container mx-auto text-center mb-8">
@@ -59,7 +55,7 @@ export function PortfolioSection({ className }: { className?: string }) {
         <p className="text-gray-600 dark:text-gray-400">Take a look at some of the projects we brought to life.</p>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {portfolioItems.map(item => <PortfolioItem key={item.id} {...item} />)}
+        {projects.map(item => <PortfolioItem key={item.id} {...item} />)}
       </div>
     </section>
   );

@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Heelies Shoe Ecom",
+      "description": "Online shoe store offering footwear for men, women, and children.",
+      "imageUrl": "/images/heelies-app.jpg",
+      "link": "/project/heelies"
+    },
+    {
+      "id": 2,
+      "title": "FixMasters",
+      "description": "Connects users with handymen for services and bookings.",
+      "imageUrl": "/images/fixmasters.png",
+      "link": "/project/fixmasters"
+    },
+    {
+      "id": 3,
+      "title": "Convo Chat-App",
+      "description": "Messaging app for seamless communication across the globe.",
+      "imageUrl": "/images/convo-chat.jpg",
+      "link": "/project/web"
+    }
+  ]
+  
