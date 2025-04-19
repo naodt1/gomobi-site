@@ -30,7 +30,7 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
                     className="text-center"
                 >
                     <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Project Not Found</h1>
-                    <p className="text-gray-600 dark:text-gray-400">Sorry, we couldn't find the project you were looking for.</p>
+                    <p className="text-gray-600 dark:text-gray-400">Sorry, we couldn&#39;t find the project you were looking for.</p>
                     <a href="/" className="mt-4 text-blue-500 hover:underline">
                         Go back to homepage
                     </a>
