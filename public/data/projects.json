@@ -1,24 +1,26 @@
 [
-    {
-      "id": 1,
-      "title": "Heelies Shoe Ecom",
-      "description": "Online shoe store offering footwear for men, women, and children.",
-      "imageUrl": "/images/heelies-app.jpg",
-      "link": "/project/heelies"
-    },
-    {
-      "id": 2,
-      "title": "FixMasters",
-      "description": "Connects users with handymen for services and bookings.",
-      "imageUrl": "/images/fixmasters.png",
-      "link": "/project/fixmasters"
-    },
-    {
-      "id": 3,
-      "title": "Convo Chat-App",
-      "description": "Messaging app for seamless communication across the globe.",
-      "imageUrl": "/images/convo-chat.jpg",
-      "link": "/project/web"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Heelies Shoe Ecom",
+    "description": "Online shoe store offering footwear for men, women, and children.",
+    "imageUrl": "/images/heelies-app.jpg",
+    "detailedContent": "<h3>Overview</h3><p>Heelies is a sleek and responsive shoe e-commerce app built using Flutter. It allows users to browse, search, and purchase shoes across multiple categories including men’s, women’s, and children’s footwear.</p><h3>Key Features</h3><ul><li>Product listing with filters and categories</li><li>Product detail page with image gallery</li><li>Shopping cart and order management</li><li>Secure user authentication</li></ul><h3>Tech Stack</h3><ul><li>Flutter</li><li>Node.js (backend)</li><li>MongoDB (database)</li></ul>",
+    "link": "heelies"
+  },
+  {
+    "id": 2,
+    "title": "FixMasters",
+    "description": "Connects users with handymen for services and bookings.",
+    "imageUrl": "/images/fixmasters.png",
+    "detailedContent": "<h3>Overview</h3><p>FixMasters is a handyman service booking app that connects users with nearby service providers such as plumbers, electricians, and more.</p><h3>Key Features</h3><ul><li>User-friendly service booking system</li><li>Chat feature between users and handymen</li><li>Push notifications for updates</li><li>Handymen can manage gigs and view booking status</li></ul><h3>Tech Stack</h3><ul><li>Flutter</li><li>Firebase Firestore</li><li>Firebase Authentication</li><li>Local Notifications</li></ul>",
+    "link": "fixmasters"
+  },
+  {
+    "id": 3,
+    "title": "Convo Chat-App",
+    "description": "Messaging app for seamless communication across the globe.",
+    "imageUrl": "/images/convo-chat.jpg",
+    "detailedContent": "<h3>Overview</h3><p>Convo is a real-time chat application inspired by modern messengers like Telegram. It supports text messaging, user authentication, and live conversations.</p><h3>Key Features</h3><ul><li>One-on-one chat with real-time updates</li><li>User authentication and profile setup</li><li>Typing indicators and message read receipts (coming soon)</li></ul><h3>Tech Stack</h3><ul><li>Flutter</li><li>Firebase Firestore</li><li>Firebase Authentication</li></ul>",
+    "link": "convo"
+  }
+]

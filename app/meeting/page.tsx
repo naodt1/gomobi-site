@@ -57,7 +57,6 @@ const Meeting = () => {
                   initial="hidden"
                   animate="visible"
                   transition={{ delay: index * 1.8 }}
-                  className="flex gap-x-4 py-4"
                 >
                   <PiCheckCircle className=" rounded-md text-[#3d80d7] text-2xl flex-shrink-0" />
                   <ul>

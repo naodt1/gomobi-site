@@ -11,51 +11,69 @@ interface Project {
   link?: string;
 }
 
-// Portfolio Item Component
-const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: string; link?: string }> = ({ imageUrl, title, description, link }) => (
-  <div className="relative rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-    <div className="aspect-w-16 aspect-h-9 p-40">
-      <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: string; link?: string }> = ({
+  imageUrl,
+  title,
+  description,
+  link,
+}) => (
+  <div className="relative rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+    <div className="relative w-full h-80"> {/* Increased from h-60 to h-80 */}
+      <Image
+        src={imageUrl}
+        alt={title}
+        layout="fill"
+        objectFit="cover"
+        className="group-hover:scale-105 transition-transform duration-500 ease-in-out"
+      />
     </div>
-    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60 hover:opacity-80 transition-opacity duration-300"></div>
-    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-      <h3 className="font-semibold text-xl">{title}</h3>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent group-hover:from-black/60 transition duration-300" />
+    <div className="absolute bottom-0 p-6 text-white z-10"> {/* More padding */}
+      <h3 className="font-semibold text-2xl">{title}</h3>
       <p className="text-sm mt-1 line-clamp-2">{description}</p>
-      {link && <a href={link} className="text-indigo-300 hover:underline mt-2 block text-xs">View Project</a>}
+      {link && (
+        <a
+          href={"/projects/" + link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-300 hover:text-indigo-400 hover:underline mt-2 block text-sm"
+        >
+          View Project
+        </a>
+      )}
     </div>
   </div>
 );
 
-// Portfolio Section Component
+
 export function PortfolioSection({ className }: { className?: string }) {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/projects.json'); // Corrected path
-        if (!response.ok) {
-          throw new Error(`Failed to fetch projects: ${response.status}`);
-        }
+        const response = await fetch("/data/projects.json");
+        if (!response.ok) throw new Error(`Failed to fetch projects: ${response.status}`);
         const data: Project[] = await response.json();
         setProjects(data);
       } catch (error) {
         console.error("Error fetching project data:", error);
-        //  Handle error (e.g., show a message to the user)
-        setProjects([]); // Or set to some default empty array
+        setProjects([]);
       }
     };
     fetchData();
   }, []);
 
   return (
-    <section className={`py-16 ${className}`} id="portfolio">
-      <div className="container mx-auto text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">Our Portfolio</h2>
-        <p className="text-gray-600 dark:text-gray-400">Take a look at some of the projects we brought to life.</p>
+    <section className={`py-20 px-4 md:px-8 lg:px-16 ${className}`} id="portfolio">
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <h2 className="text-4xl font-extrabold text-gray-800 dark:text-white mb-3">Our Portfolio</h2>
+        <p className="text-gray-600 dark:text-gray-300 text-base">Take a look at some of the projects we brought to life.</p>
       </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map(item => <PortfolioItem key={item.id} {...item} />)}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(item => (
+          <PortfolioItem key={item.id} {...item} />
+        ))}
       </div>
     </section>
   );

@@ -1,30 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SocialLinks } from "./socialLink";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fafafa] py-10  px-6 md:px-0 md:mx-auto border-t">
-      <div className="flex flex-col  justify-between gap-y-3 xl:w-4/5 2xl:w-[68%] mx-auto">
-        <h1 className="text-3xl md:text-5xl font-medium ">
-          <Image
-            src={"/logo/logo.webp"}
-            width={10000}
-            height={10000}
-            className="w-40"
-            alt="image"
-          />{" "}
-        </h1>
-        <p className="text-left  text-xl  text-gray-500">519-319-1562</p>
-        <p className="text-left  text-xl  text-gray-500">
-          admin@birdsoftware.ca
-        </p>
-      </div>
+    <footer className="bg-[#fafafa] border-t py-10 px-6 md:px-0">
+      <div className="xl:w-4/5 2xl:w-[68%] mx-auto flex flex-col gap-y-8">
 
-      <div className="flex md:justify-center gap-x-4 mt-10">
-        © 2024 Bird. All Rights Reserved.
-        <Link href="/" className="text-blue-500">
-          Privacy Policy
-        </Link>
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between gap-y-6">
+          {/* Logo and Contact */}
+          <div className="flex flex-col gap-y-2">
+            <Image
+              src="/logo/gomobi-trans.png"
+              alt="GoMobi Studios"
+              width={160}
+              height={40}
+              className="w-40"
+            />
+            <p className="text-gray-500 text-lg">info@gomobistudios.com</p>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-wrap gap-4 text-gray-700 text-sm md:text-base items-start md:items-end">
+            <Link href="/" className="hover:text-black transition">Home</Link>
+            <Link href="#services" className="hover:text-black transition">Services</Link>
+            <Link href="#about" className="hover:text-black transition">About Us</Link>
+            <Link href="#offer" className="hover:text-black transition">Solutions</Link>
+            <Link href="#pricing" className="hover:text-black transition">Pricing</Link>
+            <Link href="#contact" className="hover:text-black transition">Contact</Link>
+            <Link href="/privacy" className="hover:text-black transition">Privacy Policy</Link>
+          </div>
+        </div>
+
+        <hr className="border-gray-300" />
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-y-4 text-gray-600 text-sm">
+          <p>© 2025 GoMobi Studios. All Rights Reserved.</p>
+
+          {/* Social Links (Optional icons in `/public/icons`) */}
+          <div className="flex gap-4">
+            <SocialLinks/>
+          </div>
+        </div>
       </div>
     </footer>
   );
