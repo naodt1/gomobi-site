@@ -1,4 +1,3 @@
-// app/not-found.tsx
 'use client'; // Make sure this is a client component for Framer Motion
 
 import React from 'react';
@@ -68,13 +67,13 @@ export default function NotFound() {
         className="text-lg text-gray-600 mb-8"
         variants={subtitleVariants}
       >
-        Oops! It seems the page you were looking for has wandered off, perhaps in search of some delicious <span className="italic">injera</span> it couldn't resist.
+        Oops! It seems the page you were looking for has wandered off, perhaps in search of some delicious <span className="italic">injera</span> it&#39;t resist.
       </motion.p>
       <motion.div
         className="mb-10"
         variants={navigationVariants}
       >
-        <p className="font-semibold text-gray-700 mb-4">Don't worry, it happens to the best of us. Here are a few ways to get back on the right path:</p>
+        <p className="font-semibold text-gray-700 mb-4">Don&#39;t worry, it happens to the best of us. Here are a few ways to get back on the right path:</p>
         <ul className="list-none p-0">
           <motion.li className="mb-3" variants={linkVariants}>
             <Link href="/" className="inline-flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
