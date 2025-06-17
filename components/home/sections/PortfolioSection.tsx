@@ -31,7 +31,7 @@ const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: st
     <div className="absolute bottom-0 p-6 text-white z-10"> {/* More padding */}
       <h3 className="font-semibold text-2xl">{title}</h3>
       <p className="text-sm mt-1 line-clamp-2">{description}</p>
-      {link && (
+      {/* {link && (
         <a
           href={"/projects/" + link}
           target="_blank"
@@ -40,7 +40,7 @@ const PortfolioItem: React.FC<{ imageUrl: string; title: string; description: st
         >
           View Project
         </a>
-      )}
+      )} */}
     </div>
   </div>
 );

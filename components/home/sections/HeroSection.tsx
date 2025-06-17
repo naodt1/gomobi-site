@@ -9,12 +9,12 @@ export function HeroSection() {
         <h1
           className="text-3xl md:text-6xl font-semibold max-w-7xl mx-auto md:text-center relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
         >
-          We Build Beautiful <br /> <Cover>Blazing-Fast Mobile Apps</Cover>
+          {/* We Build Beautiful <br /> <Cover>Blazing-Fast Mobile Apps</Cover> */}
+           We Build MVPs <br /> For Breakfast!
         </h1>
 
         <p className="md:text-center text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500">
-          GoMobi is a mobile-first development studio helping startups and brands
-          turn ideas into high-performing mobile experiences.
+          Your idea, turned into a working mobile app in <strong>30 days</strong>, without the agency fluff
         </p>
 
         <div className="flex md:justify-center items-center gap-x-4">

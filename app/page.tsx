@@ -25,7 +25,6 @@ import { PortfolioSection } from "@/components/home/sections/PortfolioSection";
 import Footer from "@/components/footer";
 import PricingSection from "@/components/home/sections/PricingSection";
 
-
 export default function Home() {
   return (
     <div
@@ -39,30 +38,25 @@ export default function Home() {
       <main className="md:pb-10">
         <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto mt-14">
           {/* <AnimatedShinyTextDemo /> */}
-
           <HeroSection />
-
-          {/* <ServiceGrid/> */}
-
         </div>
       </main>
 
       <Element name="services">
-        <ServicesSection/>
+        <ServicesSection />
       </Element>
-
 
       <section className="py-20">
         <ScrollBasedVelocityDemo />
       </section>
 
-      <Element name="about">
-        <AboutSection/>
+      <Element name="portfolio">
+        <PortfolioSection />
       </Element>
-
-      <Element name="process">
-        <OurProcessSection/>
-      </Element> 
+{/* 
+      <Element name="about">
+        <AboutSection />
+      </Element> */}
 
       {/* <section>
         <main className="md:flex items-center justify-center space-y-6 md:space-y-0 md:gap-x-20 xl:w-4/5 2xl:w-[68%] mx-auto px-6 md:px-0">
@@ -99,20 +93,21 @@ export default function Home() {
       <Element name="solutions">
         <WhatWeoffer />
       </Element>
-
-      <Element name="portfolio" >
-        <PortfolioSection/>
-      </Element>
+      
 
       <Element name="pricing">
-        <PricingSection/>
+        <PricingSection />
+      </Element>
+
+      <Element name="process">
+        <OurProcessSection />
       </Element>
 
       <section className="my-10 md:py-20 xl:w-4/5 2xl:w-[68%] md:mx-auto">
         <LetsMakeThingsHappenSection />
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
