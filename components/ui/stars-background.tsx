@@ -34,7 +34,8 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   className,
 }) => {
   const [stars, setStars] = useState<StarProps[]>([]);
-  const canvasRef: RefObject<HTMLCanvasElement> =
+  // FIX IS HERE: Allow canvasRef.current to be HTMLCanvasElement or null
+  const canvasRef: RefObject<HTMLCanvasElement | null> =
     useRef<HTMLCanvasElement>(null);
 
   const generateStars = useCallback(
@@ -67,7 +68,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
 
   useEffect(() => {
     const updateStars = () => {
-      if (canvasRef.current) {
+      if (canvasRef.current) { // You correctly check for null here
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
@@ -82,12 +83,12 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     updateStars();
 
     const resizeObserver = new ResizeObserver(updateStars);
-    if (canvasRef.current) {
+    if (canvasRef.current) { // And here
       resizeObserver.observe(canvasRef.current);
     }
 
     return () => {
-      if (canvasRef.current) {
+      if (canvasRef.current) { // And here
         resizeObserver.unobserve(canvasRef.current);
       }
     };
@@ -102,7 +103,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) return; // And here
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
