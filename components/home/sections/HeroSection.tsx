@@ -14,7 +14,7 @@ export function HeroSection() {
         </h1>
 
         <p className="md:text-center text-xl md:text-2xl my-6 md:my-10 md:w-4/5 mx-auto text-gray-500">
-          Your idea, turned into a working mobile app in <strong>30 days</strong>, without the agency fluff
+          Your idea, turned into a working mobile app in weeks, without the agency fluff
         </p>
 
         <div className="flex md:justify-center items-center gap-x-4">
@@ -22,14 +22,14 @@ export function HeroSection() {
             href="/meeting"
             className="py-3 px-10 md:px-16 md:text-xl hover:bg-[#abcbff] rounded-[6px] border-2 border-black dark:border-white bg-[#121212] text-white transition duration-200 hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
           >
-            Get Started
+            Book a Call
           </Link>
-          <Link
+          {/* <Link
             href={"/showcase"}
             className="bg-white py-3 px-10 md:px-16 md:text-xl border-4 border-black rounded-[6px] hover:shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
           >
             About Us
-          </Link>
+          </Link> */}
         </div>
       </div>
 

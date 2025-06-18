@@ -18,7 +18,7 @@ const Footer = () => {
               height={40}
               className="w-40"
             />
-            <p className="text-gray-500 text-lg">info@gomobistudios.com</p>
+            <p className="text-gray-500 text-lg">info@gomobi.dev</p>
           </div>
 
           {/* Navigation Links */}
@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-y-4 text-gray-600 text-sm">
-          <p>© 2025 GoMobi Studios. All Rights Reserved.</p>
+          <p>© 2025 GoMobi Studio. All Rights Reserved.</p>
 
           {/* Social Links (Optional icons in `/public/icons`) */}
           <div className="flex gap-4">

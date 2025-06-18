@@ -24,6 +24,7 @@ import { OurProcessSection } from "@/components/home/sections/OurProcessSection"
 import { PortfolioSection } from "@/components/home/sections/PortfolioSection";
 import Footer from "@/components/footer";
 import PricingSection from "@/components/home/sections/PricingSection";
+import { WhyUsSection } from "@/components/home/sections/Whyus";
 
 export default function Home() {
   return (
@@ -46,9 +47,9 @@ export default function Home() {
         <ServicesSection />
       </Element>
 
-      <section className="py-20">
+      {/* <section className="py-20">
         <ScrollBasedVelocityDemo />
-      </section>
+      </section> */}
 
       <Element name="portfolio">
         <PortfolioSection />
@@ -90,14 +91,20 @@ export default function Home() {
         </main>
       </section> */}
 
+      <Element name="why-us">
+          <WhyUsSection />
+      </Element>
+
+        <Element name="pricing">
+        <PricingSection />
+      </Element>
+
+
       <Element name="solutions">
         <WhatWeoffer />
       </Element>
       
 
-      <Element name="pricing">
-        <PricingSection />
-      </Element>
 
       <Element name="process">
         <OurProcessSection />
