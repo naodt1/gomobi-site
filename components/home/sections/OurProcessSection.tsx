@@ -28,8 +28,8 @@ export const OurProcessSection = () => {
         </span>{" "}
       </h1>
 
-      <p className="text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
-        From idea to App Store in weeks, not months. Here's how we make it happen:
+<p className="text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
+        From idea to App Store in weeks, not months. Here&apos;s how we make it happen:
       </p>
 
       {/* Progress Visualizer */}
