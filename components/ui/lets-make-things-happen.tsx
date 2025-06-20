@@ -20,13 +20,13 @@ function LetsMakeThingsHappenSection() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true, amount: 0.3 }} // Ensures animation plays once when 30% in view
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> {/* Added mb-4 for spacing */}
-          Ready to Build Your MVP?
-        </h2>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+  Ready to Build Your MVP?
+</h2>
 
-        <p className="my-6 md:my-8 text-lg md:text-xl text-blue-100 max-w-2xl mx-auto md:mx-0"> {/* mx-auto for center, md:mx-0 for left */}
-          Let's turn your app idea into reality in weeks, not months. Schedule a free consultation to discuss your project.
-        </p>
+<p className="my-6 md:my-8 text-lg md:text-xl text-blue-100 max-w-2xl mx-auto md:mx-0"> {/* mx-auto for center, md:mx-0 for left */}
+  Let&apos;s turn your app idea into reality in weeks, not months. Schedule a free 15m call to discuss your project.
+</p>
 
         <motion.div
           whileHover={{ scale: 1.05 }}
@@ -53,12 +53,12 @@ function LetsMakeThingsHappenSection() {
         transition={{ delay: 0.2, duration: 0.5 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <Image
+        {/* <Image
           src="/images/mobile-dev-illustration.png" // Replace with your actual image path
           alt="Mobile app development illustration"
           fill
           className="object-contain"
-        />
+        /> */}
       </motion.div>
     </section>
   );

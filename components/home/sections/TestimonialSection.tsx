@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Tadele T.",
+    name: "toni77_deal",
     content: "Very useful app. Helps me track my plants perfectly.",
     rating: 5
   },
@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 5,
     name: "Ali R.",
-    content: "Great product to schedule on Reddit, grow that Karma and make an audience",
+    content: "Great product to schedule on Reddit, grow that Karma and an audience", // Assuming there was an unintended quote here
     rating: 5
   },
   {
@@ -67,11 +67,15 @@ const TestimonialCarousel = () => {
   return (
     <section className="py-12 bg-[#024293]">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2">Success Stories</h2>
-          <p className="text-gray-300">
-            What our users say about our products
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
+<p className="text-xl text-gray-300">
+  We don&apos;t have many reviews yet, but{" "} {/* Changed don't to don&apos;t */}
+  <a href="/reviews" className="text-blue-300 hover:underline">
+    here&apos;s what users say about our apps {/* Changed here's to here&apos;s */}
+  </a>
+  .
+</p>
         </div>
 
         <div className="relative h-64">
@@ -99,7 +103,7 @@ const TestimonialCarousel = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700">"{testimonial.content}"</p>
+                <p className="text-gray-700">{testimonial.content}</p>
               </motion.div>
             ))}
           </div>
