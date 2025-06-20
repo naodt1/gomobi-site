@@ -21,10 +21,11 @@ import StatsSection from "@/components/home/sections/StatsSection";
 import ServicesSection from "@/components/home/sections/ServicesSection";
 import AboutSection from "@/components/home/sections/AboutSection";
 import { OurProcessSection } from "@/components/home/sections/OurProcessSection";
-import { PortfolioSection } from "@/components/home/sections/PortfolioSection";
 import Footer from "@/components/footer";
 import PricingSection from "@/components/home/sections/PricingSection";
 import { WhyUsSection } from "@/components/home/sections/Whyus";
+import TestimonialSection from "@/components/home/sections/TestimonialSection";
+import PortfolioSection from "@/components/home/sections/PortfolioSection";
 
 export default function Home() {
   return (
@@ -99,10 +100,13 @@ export default function Home() {
         <PricingSection />
       </Element>
 
+        <Element name="testimonial">
+          <TestimonialSection/>
+        </Element>
 
-      <Element name="solutions">
+      {/* <Element name="solutions">
         <WhatWeoffer />
-      </Element>
+      </Element> */}
       
       <Element name="process">
         <OurProcessSection />
