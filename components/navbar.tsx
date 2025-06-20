@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           </ScrollLink>
 
           <ScrollLink
-            to="about"
+            to="portfolio"
             smooth={true}
             duration={500}
             spy={true}
@@ -55,19 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             className="hover:text-blue-500"
             tabIndex={0}
           >
-            About Us
-          </ScrollLink>
-
-          <ScrollLink
-            to="offer"
-            smooth={true}
-            duration={500}
-            spy={true}
-            activeClass="text-blue-600 font-semibold"
-            className="hover:text-blue-500"
-            tabIndex={0}
-          >
-            Solutions
+            Portfolio
           </ScrollLink>
 
           <ScrollLink
@@ -83,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           </ScrollLink>
 
           <ScrollLink
-            to="contact"
+            to="testimonial"
             smooth={true}
             duration={500}
             spy={true}
@@ -91,8 +79,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             className="hover:text-blue-500"
             tabIndex={0}
           >
-            Contact
+            Reviews
           </ScrollLink>
+
+          <a href="mailto:info@gomobi.dev"  className="hover:text-blue-500">Contact</a>
         </div>
       </div>
 
